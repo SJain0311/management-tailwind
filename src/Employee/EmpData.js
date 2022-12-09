@@ -114,6 +114,22 @@ const EmpData = () => {
       </div>
     </div>
   </div>
+
+        <button
+        onClick={logOut}
+          className="
+                              border border-primary
+                              py-2
+                              px-6
+                              text-primary
+                              inline-block
+                              rounded
+                              hover:bg-primary hover:text-white
+                              "
+        >
+          Logout
+        </button>
+
 </div>
     </div>
   );

@@ -78,8 +78,10 @@ const Login = (props) => {
         
 
           <div>
-            <h1 className="underline underline-offset-2">
-              <Link to="/signup">Signup</Link>
+          
+            <h1>
+            <p>Create New Account{'  '}
+              <Link to="/signup" className="underline ">{'   '}Signup</Link></p>
             </h1>
           </div>
         </div>

@@ -14,16 +14,7 @@ import {
 } from "firebase/firestore";
 import { Link, useNavigate } from "react-router-dom";
 import DropDown from "../Component/DropDown";
-import {
-  Button,
-  Typography,
-  Container,
-  Radio,
-  FormControl,
-  Select,
-  RadioGroup,
-  FormControlLabel,
-} from "@mui/material";
+
 
 const Manager = (props) => {
   const { formData } = props;
@@ -157,58 +148,57 @@ const Manager = (props) => {
           value={querys}
         >
           <div className="flex items-center mr-6  ">
-          <div class="form-check form-check-inline">
-            <input
-              id="default-radio-1"
-              type="radio"
-              value="1"
-              name="default-radio"
-              className=" h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-            />
-            <label
-              for="default-radio-1"
-              className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-            >
-              HR departments with Max salary
-            </label>
+            <div class="form-check form-check-inline">
+              <input
+                id="default-radio-1"
+                type="radio"
+                value="1"
+                name="default-radio"
+                className=" h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="default-radio-1"
+                className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >
+                HR departments with Max salary
+              </label>
             </div>
           </div>
           <div className="flex items-center mr-6  ">
-          <div class="form-check form-check-inline">
-            <input
-              id="default-radio-2"
-              type="radio"
-              value="2"
-              name="default-radio"
-              className=" h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-            />
-            <label
-              for="default-radio-2"
-              className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-            >
-              IT departments with Min salary
-            </label>
+            <div class="form-check form-check-inline">
+              <input
+                id="default-radio-2"
+                type="radio"
+                value="2"
+                name="default-radio"
+                className=" h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="default-radio-2"
+                className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >
+                IT departments with Min salary
+              </label>
             </div>
           </div>
           <div className="flex items-center mr-6  ">
-          <div class="form-check form-check-inline">
-            <input
-              id="default-radio-3"
-              type="radio"
-              value="3"
-              name="default-radio"
-              className=" h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-            />
-            <label
-              for="default-radio-3"
-              className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-            >
-              IT Departments and location is Surat city
-            </label>
+            <div class="form-check form-check-inline">
+              <input
+                id="default-radio-3"
+                type="radio"
+                value="3"
+                name="default-radio"
+                className=" h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="default-radio-3"
+                className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >
+                IT Departments and location is Surat city
+              </label>
             </div>
           </div>
           <div className="flex items-center mr-6  ">
-
             <input
               id="default-radio-4"
               type="radio"
@@ -224,20 +214,20 @@ const Manager = (props) => {
             </label>
           </div>
           <div className="flex items-center mr-6  ">
-          <div class="form-check form-check-inline">
-            <input
-              id="default-radio-5"
-              type="radio"
-              value="5"
-              name="default-radio"
-              className=" h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-            />
-            <label
-              for="default-radio-5"
-              className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-            >
-              Sales departments and descending order of employee name
-            </label>
+            <div class="form-check form-check-inline">
+              <input
+                id="default-radio-5"
+                type="radio"
+                value="5"
+                name="default-radio"
+                className=" h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="default-radio-5"
+                className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >
+                Sales departments and descending order of employee name
+              </label>
             </div>
           </div>
         </div>
@@ -335,9 +325,9 @@ const Manager = (props) => {
           </div>
         </div>
       </div>
-      <Link to="/">
-        <button
-          className="
+      <button
+        onClick={logOut}
+        className="
                               border border-primary
                               py-2
                               px-6
@@ -345,11 +335,10 @@ const Manager = (props) => {
                               inline-block
                               rounded
                               hover:bg-primary hover:text-white
-                              "
-        >
-          Sign Up
-        </button>
-      </Link>
+                             "
+      >
+        Logout
+      </button>
     </div>
   );
 };
