@@ -75,9 +75,7 @@ const Login = (props) => {
           </button>
         </div>
         <div className="mx-7 my-3 flex justify-between text-sm font-semibold">
-          <div>
-            <h1>Forget Password</h1>
-          </div>
+        
 
           <div>
             <h1 className="underline underline-offset-2">
