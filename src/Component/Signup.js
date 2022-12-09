@@ -77,30 +77,11 @@ function Signup(props) {
       gender,
       hobbies,
       uid,
-      type: "",
+      type ,
         createdAt: new Date(),
     });
   };
-  //   const handleSignUp = async (e) => {
-  //     e.preventDefault();
-  //     console.log("email", formik.values.email, "pass", formik.values.password);
-  //     //Funtion to Sign Up with Authentication
-  //     await createUserWithEmailAndPassword(
-  //       auth,
-  //       formik.values.email,
-  //       formik.values.password
-  //     )
-  //       .then((res) => {
-  //         if (res) {
-  //           createUserDocument(res, formik.values);
-  //           console.log("res", res, "hi", formik.values);
-
-  //         }
-  //       })
-  //       .catch((error) => {
-  //         console.log("error", error);
-  //       });
-  //   };
+  
 
   const formik = useFormik({
     initialValues: {
@@ -229,6 +210,21 @@ function Signup(props) {
               />
               {formik.errors.salary && (
                 <div style={{ color: "#0DE6AC" }}>{formik.errors.salary}</div>
+              )}
+            </div>
+            <div className="mb-2">
+              <input
+                type="text"
+                className="block border border-grey-light w-full p-3 rounded"
+                name="hobbies"
+                id="hobbies"
+                placeholder="Hobbies"
+                label="Enter Hobbies"
+                value={formik.values.hobbies}
+                onChange={formik.handleChange}
+              />
+              {formik.errors.hobbies && (
+                <div style={{ color: "#0DE6AC" }}>{formik.errors.hobbies}</div>
               )}
             </div>
             <div className="mb-2">
