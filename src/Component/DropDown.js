@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import FormControl from "@mui/material/FormControl";
 import { doc, updateDoc } from "firebase/firestore";
-import MenuItem from "@mui/material/MenuItem";
 import { db } from "../firebaseConfig";
-import { Select } from "@mui/material";
+
 
 function DropDown({ data }) {
   const [depts, setDepts] = useState("");
@@ -26,23 +24,38 @@ function DropDown({ data }) {
     setDepts(data.dept);
   }, [data.dept]);
   return (
-   
-      <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-        <Select
-          labelId="demo-simple-select-standard-label"
-          id="demo-simple-select-standard"
-          value={depts}
-          onChange={(e) => {
-            handleChange(e, data.id);
-          }}
-          // label="Age"
-        >
-          <MenuItem value={"HR"}>HR</MenuItem>
-          <MenuItem value={"Sales"}>Sales</MenuItem>
-          <MenuItem value={"It"}>IT</MenuItem>
-        </Select>
-      </FormControl>
-  
+   <div>
+    <div class="flex justify-center">
+  <div class="mb-1 xl:w-96">
+    <select  className="form-select appearance-none
+      block
+      w-full
+      px-3
+      py-1.5
+      text-base
+      font-normal
+      text-gray-700
+      bg-white bg-clip-padding bg-no-repeat
+      border border-solid border-gray-300
+      rounded
+      transition
+      ease-in-out
+      m-0
+
+      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
+      value={depts}
+      onChange={(e) => {
+        handleChange(e, data.id);
+      }}
+      aria-label="Default select example">
+        <option value={"HR"}>HR</option>
+        <option value={"Sales"}>Sales</option>
+        <option value={"IT"}>IT</option>
+    </select>
+
+</div>
+   </div>
+   </div>
   );
 }
 

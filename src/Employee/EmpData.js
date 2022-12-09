@@ -105,7 +105,7 @@ const EmpData = () => {
               {row.salary}
               </td>
               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-              {row.type}
+              {row.dept}
               </td>
             </tr>
            ))}

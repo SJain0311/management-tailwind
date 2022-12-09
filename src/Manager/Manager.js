@@ -149,43 +149,100 @@ const Manager = (props) => {
   }, []);
   return (
     <div>
-      <div className="my-10 mx-10">
-        <Typography variant="h6">Filter</Typography>
-        <RadioGroup
-          row
-          aria-labelledby="demo-row-radio-buttons-group-label"
-          name="row-radio-buttons-group"
+      <div className="w-full lg:w-12/12 px-4">
+        <div
+          className="relative justify-center w-full item-center  flex my-4"
+          // name="gender"
           onChange={(e) => handleQuery(e)}
           value={querys}
         >
-          <FormControlLabel
-            value="1"
-            control={<Radio />}
-            label="HR departments with Max salary"
-          />
+          <div className="flex items-center mr-6  ">
+          <div class="form-check form-check-inline">
+            <input
+              id="default-radio-1"
+              type="radio"
+              value="1"
+              name="default-radio"
+              className=" h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            />
+            <label
+              for="default-radio-1"
+              className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >
+              HR departments with Max salary
+            </label>
+            </div>
+          </div>
+          <div className="flex items-center mr-6  ">
+          <div class="form-check form-check-inline">
+            <input
+              id="default-radio-2"
+              type="radio"
+              value="2"
+              name="default-radio"
+              className=" h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            />
+            <label
+              for="default-radio-2"
+              className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >
+              IT departments with Min salary
+            </label>
+            </div>
+          </div>
+          <div className="flex items-center mr-6  ">
+          <div class="form-check form-check-inline">
+            <input
+              id="default-radio-3"
+              type="radio"
+              value="3"
+              name="default-radio"
+              className=" h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            />
+            <label
+              for="default-radio-3"
+              className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >
+              IT Departments and location is Surat city
+            </label>
+            </div>
+          </div>
+          <div className="flex items-center mr-6  ">
 
-          <FormControlLabel
-            value="2"
-            control={<Radio />}
-            label="IT departments with Min salary"
-          />
-          <FormControlLabel
-            value="3"
-            control={<Radio />}
-            label=" IT departments and location is Surat city"
-          />
-          <FormControlLabel
-            value="4"
-            control={<Radio />}
-            label=" City name is starting from A"
-          />
-          <FormControlLabel
-            value="5"
-            control={<Radio />}
-            label=" Sales departments and descending order of employee name"
-          />
-        </RadioGroup>
+            <input
+              id="default-radio-4"
+              type="radio"
+              value="4"
+              name="default-radio"
+              className=" h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            />
+            <label
+              for="default-radio-4"
+              className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >
+              City name is starting from A
+            </label>
+          </div>
+          <div className="flex items-center mr-6  ">
+          <div class="form-check form-check-inline">
+            <input
+              id="default-radio-5"
+              type="radio"
+              value="5"
+              name="default-radio"
+              className=" h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            />
+            <label
+              for="default-radio-5"
+              className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >
+              Sales departments and descending order of employee name
+            </label>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="flex flex-col">
         <div class="overflow-x-auto sm:mx-0.5 lg:mx-0.5">
           <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
@@ -277,17 +334,9 @@ const Manager = (props) => {
             </div>
           </div>
         </div>
-
-        {/* <button
-          onClick={logOut}
-          className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
-        >
-          LOGOUT
-        </button> */}
       </div>
-      <Link  to="/">
+      <Link to="/">
         <button
-
           className="
                               border border-primary
                               py-2
